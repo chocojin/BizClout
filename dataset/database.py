@@ -5,7 +5,6 @@ db = firestore.Client()
 
 doc_ref = db.collection(u'influencers').document(u'kaurBeauty')
 doc_ref.set({
-    u'subscribers': 252000,
     u'description': u'I\'m a makeup artist and medical student (aspiring \
     dermatologist) based in Northern California! Here on my channel, you will \
     find makeup, lifestyle, fashion, and medicine; be sure to subscribe so you \
@@ -13,7 +12,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'Food Wishes')
 doc_ref.set({
-    u'subscribers': 3080000,
     u'description': u'Hello this is Chef John, and welcome to the Food Wishes \
     channel, where the food is the star. Watch these fun-to-make, and \
     easy-to-follow recipes, and you\'ll improve your culinary skills dramatically! \
@@ -26,7 +24,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'PatrickStarrr ')
 doc_ref.set({
-    u'subscribers': 4430000,
     u'description': u'Hey YouTube! This is my Makeup, Beauty and Lifestyle \
     channel! "MAKEUP IS A ONE SIZE FITS ALL".I love makeup, photography and \
     YouTube! I want boys in BEAUTY! I am a professional makeup and I want to \
@@ -39,7 +36,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'Cooking With Sros')
 doc_ref.set({
-    u'subscribers': 585000,
     u'description': u'Hi my beloved visitors and subscribers. My name is Sros. I \
     am here to serve all of you with food cooking recipe such as modern recipe, \
     popular recipes, family scale recipes, seafood recipe, rustic recipe, and \
@@ -50,7 +46,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'Dave Beaulieu')
 doc_ref.set({
-    u'subscribers': 89200,
     u'description': u'Cooking new and interesting food is my passion.  But it\'s \
     not always about the recipe.  Of course I use recipes, but more importantly, \
     I focus on the cooking techniques that make great food. I\'m not a chef.  I\'m \
@@ -64,7 +59,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'James Charles')
 doc_ref.set({
-    u'subscribers': 4430000,
     u'description': u'Hey YouTube! This is my Makeup, Beauty and Lifestyle \
     channel! "MAKEUP IS A ONE SIZE FITS ALL".I love makeup, photography and \
     YouTube! I want boys in BEAUTY! I am a professional makeup and I want to \
@@ -77,14 +71,12 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'Kylie Jenner')
 doc_ref.set({
-    u'subscribers': 6240000,
     u'description': u'Exclusive videos from Kylie Jenner. I enjoy making beauty\
     and lifestyle videos. I believe that everyone can be beautiful Behind-the-scenes \
     content, makeup videos, beauty tutorials and more.'
 })
 doc_ref = db.collection(u'influencers').document(u'Kendall Jenner')
 doc_ref.set({
-    u'subscribers': 6240000,
     u'description': u'Exclusive clips from Kendall Jenner’s Official App!\
     The Kendall Jenner Official App gives Kendall\'s audience unprecedented and\
     exclusive personal access to her life. Through the app, Kendall shares \
@@ -100,7 +92,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'Marlena Stell')
 doc_ref.set({
-    u'subscribers': 1520000,
     u'description': u'My purpose for this channel is to inspire ALL women of \
     all ages, sizes, skin color, and ethnicities to feel their best on the \
     inside and out. My sole calling in life is to build others up and to help \
@@ -110,7 +101,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'Glen & Friends Cooking')
 doc_ref.set({
-    u'subscribers': 1060000,
     u'description': u'New name but we\'re still all about food, cooking and \
     recipes. Glen And  Friends Cooking gives you easy to follow video instructions \
     about food, cooking and recipes. Each week we will upload 5 new recipe, food, \
@@ -119,7 +109,6 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'KathleenLights')
 doc_ref.set({
-    u'subscribers': 4140000,
     u'description': u'Hey! I\'m Kathleen. An oddball Aquarius with a love for all\
     things makeup and beauty! I keep it simple on this channel with reviews and tutorials \
     and sometimes I do fun challenges, but for the most part, I stay pretty old school. \
@@ -132,14 +121,12 @@ doc_ref.set({
 })
 doc_ref = db.collection(u'influencers').document(u'Bailey Sarian')
 doc_ref.set({
-    u'subscribers': 394000,
     u'description': u'Hi my name is Bailey Sarian and I am here to talk about \
     True Crime & Makeup. YES its an odd combination, but I couldn\'t just pick \
     ONE topic to focus on, why not mix them both together?'
 })
 doc_ref = db.collection(u'influencers').document(u'SAM THE COOKING GUY')
 doc_ref.set({
-    u'subscribers': 1060000,
     u'description': u'I\'m Sam, and this is my Youtube channel - welcome to my \
     world of cooking! If you love food that’s big in taste, small in effort, \
     and served with a healthy dose of irreverence… well, you’ve definitely come \
