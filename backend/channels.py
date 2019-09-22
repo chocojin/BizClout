@@ -37,5 +37,21 @@ def channelSC(query, maxResults, safeSearch, **kwargs):
 
     return channels
 
+def quickSort(channels, low, high):
+    if low < high:
+        pi = partition(arr,low,high)
+        quickSort(arr, low, pi-1)
+        quickSort(arr, pi+1, high)
+
+def partition(channels, low, high):
+    i = (low-1)
+    pivot = channels[high].subscriberCount
+
+    for j in range(low, high):
+        if channels[j].subscriberCount < pivot:
+            i += 1
+            channels[i], channels[j] = channels[j], channels[i]
+
+    channels[i+1], channels[high] = channels[high], channels[i+1]
+
 if __name__ == "__main__":
-    pass
