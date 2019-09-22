@@ -8,6 +8,12 @@ class Channel():
         for key, value in kwargs.items():
             setattr(self, key, value)
 
+    def toJSON(self):
+        return {self.title :
+                            {"subscriber" : self.subscriberCount,
+                             "description" : self.description}
+                             }
+
 def channelSC(query, maxResults, safeSearch, **kwargs):
     """
     Searches youtube for channels,
@@ -32,7 +38,8 @@ def channelSC(query, maxResults, safeSearch, **kwargs):
     channels = []
     for item in ref['items']:
         channels.append(Channel(item['id'], item['snippet']['title'],
-                        subscriberCount=item['statistics']['subscriberCount']))
+                        subscriberCount=item['statistics']['subscriberCount'],
+                        description=item['snippet']["localized"]['description']))
 
     return channels
 
@@ -74,6 +81,14 @@ def minMax(channels, min, max):
         max -= 1
 
     return channels[mi:ma+1]
+
+def channelJSONS(channels):
+    dict = {}
+    for channel in channels:
+        dict.update(channel.toJSON())
+
+    return dict
+
 
 if __name__ == "__main__":
     pass

@@ -51,7 +51,6 @@ def channels():
     quickSort(channels)
     for channel in channels:
         channel = channel.__dict__
-
     try:
         return render_template('elements.html', query=query,
         channels=minMax(channels, request.form['min'], request.form['max']))
