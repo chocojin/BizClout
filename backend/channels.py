@@ -1,6 +1,5 @@
 from apiclient.discovery import build
-from static import API_KEY
-import json
+from assets.static import API_KEY
 
 class Channel():
     def __init__(self, channelId, title, **kwargs):
@@ -55,3 +54,4 @@ def partition(channels, low, high):
     channels[i+1], channels[high] = channels[high], channels[i+1]
 
 if __name__ == "__main__":
+    pass

@@ -14,11 +14,11 @@
 
 # [START gae_python37_render_template]
 import datetime
-
+import json
 from flask import Flask, render_template
+from backend.channels import channelSC
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def root():
@@ -34,7 +34,7 @@ def root():
 @app.route('/index')
 def index():
     return render_template('index.html')
-    
+
 @app.route('/generic')
 def generic():
     return render_template('generic.html')
@@ -43,6 +43,16 @@ def generic():
 def elements():
     return render_template('elements.html')
 
+@app.route('/run_channels', methods=['GET', 'POST'])
+def channels():
+    query = request.form['query']
+    channels = channelSC(query, request.form['maxResults'],
+                         request.form['safeSearch'])
+    quickSort(channels)
+    for channel in channels:
+        channel = channel.__dict__
+
+    return render_template('elements.html', query=query, channels=channels)
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
