@@ -1,6 +1,5 @@
 from googleapiclient.discovery import build
-
-API_KEY = "AIzaSyDCNZCFWpuuKhvKRBCEv8r8ONDr1iSpsus"
+from .key import API_KEY
 
 class Channel():
     def __init__(self, channelId, title, **kwargs):
