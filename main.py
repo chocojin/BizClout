@@ -16,7 +16,7 @@
 import datetime
 import json
 from flask import Flask, redirect, render_template, request
-from backend.channels import channelSC
+from backend.channels import channelSC, quickSort
 
 app = Flask(__name__)
 

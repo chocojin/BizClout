@@ -1,5 +1,6 @@
-from apiclient.discovery import build
-from assets.static import API_KEY
+from googleapiclient.discovery import build
+
+API_KEY = "AIzaSyDCNZCFWpuuKhvKRBCEv8r8ONDr1iSpsus"
 
 class Channel():
     def __init__(self, channelId, title, **kwargs):
