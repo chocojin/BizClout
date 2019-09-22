@@ -1,10 +1,8 @@
 from google.cloud import language_v1
 from google.cloud.language_v1 import enums
-import json
- 
-text_content="I'm a makeup artist and medical student (aspiring dermatologist) based in California! Here on my channel, you will find makeup, lifestyle, fashion, and medicine; be sure to subscribe so you don’t miss out on anything!"
-influ_num=1
-channel='kaurBeauty'
+from google.cloud import firestore
+
+
 def categories(text_content):
     """
     Classifying Content in a String
@@ -81,18 +79,17 @@ def locations(text_content):
              if "LOCATION" is (enums.Entity.Type(entity.type).name):
                 locations=locations+" & "+entity.name
     return locations
- 
-data=[]
-categories=categories(text_content)
-locations=locations(text_content)
- 
-for i in range(influ_num):
-    data.append({
-        'channel': channel,
-        'categories': categories,
-        'locations': locations  
-    })
- 
-with open('bizClout/backend/data.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=4)
 
+
+db = firestore.Client()
+ 
+docs = db.collection(u'influencers').stream()
+
+
+for doc in docs:
+    descr=doc.to_dict().get('description')
+    cat=categories(descr)
+    doc_ref = db.collection(u'newinfluencers').document(doc.id)
+    doc_ref.set({
+      u'categories': cat
+    })
