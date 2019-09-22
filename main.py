@@ -15,7 +15,7 @@
 # [START gae_python37_render_template]
 import datetime
 import json
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, request
 from backend.channels import channelSC
 
 app = Flask(__name__)
