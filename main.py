@@ -16,7 +16,7 @@
 import datetime
 import json
 from flask import Flask, redirect, render_template, request
-from backend.channels import channelSC, quickSort
+from backend.channels import channelSC, quickSort, minMax
 
 app = Flask(__name__)
 
@@ -52,7 +52,11 @@ def channels():
     for channel in channels:
         channel = channel.__dict__
 
-    return render_template('elements.html', query=query, channels=channels)
+    try:
+        return render_template('elements.html', query=query,
+        channels=minMax(channels, request.form['min'], request.form['max']))
+    except AttributeError:
+        return render_template('elements.html', query=query, channels=channels)
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App

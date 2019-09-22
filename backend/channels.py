@@ -10,7 +10,7 @@ class Channel():
 
 def channelSC(query, maxResults, safeSearch, **kwargs):
     """
-    Searches youtube for channels
+    Searches youtube for channels,
 
     Parameter query: Query to search for.
     Precondition: string, length > 0
@@ -52,6 +52,28 @@ def partition(channels, low, high):
             channels[i], channels[j] = channels[j], channels[i]
 
     channels[i+1], channels[high] = channels[high], channels[i+1]
+
+def minMax(channels, min, max):
+    cha = len(channels)
+    mi = 0
+    ma = cha - 1
+    while mi <= len(channels):
+        if channels[mi].subscriberCount >= min:
+            break
+        if mi == cha:
+            return []
+
+        mi += 1
+
+    while ma >= 0:
+        if channels[ma].subscriberCount <= max:
+            break
+        if ma == cha:
+            return []
+
+        max -= 1
+
+    return channels[mi:ma+1]
 
 if __name__ == "__main__":
     pass
