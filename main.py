@@ -47,7 +47,7 @@ def elements():
 def channels():
     query = request.form['query']
     channels = channelSC(query, request.form['maxResults'],
-                         request.form['safeSearch'])
+                         'none')
     quickSort(channels)
     for channel in channels:
         channel = channel.__dict__
