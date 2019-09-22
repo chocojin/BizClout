@@ -16,11 +16,11 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">BizClout</a>
+					<a href="{{ url_for('index') }}" class="logo">BizClout</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Register</a>
-						<a href="elements.html">Find Influencers</a>
+						<a href="{{ url_for('index') }}">Home</a>
+						<a href="{{ url_for('generic') }}">Register</a>
+						<a href="{{ url_for('elements') }}">Find Influencers</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -56,7 +56,7 @@
 					</div>
 
 					<footer>
-						<a href="#" class="button">Get Started</a>
+						<a href="{{ url_for('generic') }}" class="button">Get Started</a>
 					</footer>
 				</div>
 			</section>

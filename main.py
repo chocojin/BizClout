@@ -31,6 +31,18 @@ def root():
 
     return render_template('index.html', times=dummy_times)
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
+    
+@app.route('/generic')
+def generic():
+    return render_template('generic.html')
+
+@app.route('/elements')
+def elements():
+    return render_template('elements.html')
+
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App

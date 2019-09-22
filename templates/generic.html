@@ -5,18 +5,18 @@
 		<title>BizClout Registration</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="/static/css/main.css" />
 	</head>
 	<body class="subpage">
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">BizClout</a>
+					<a href="{{ url_for('index') }}" class="logo">BizClout</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Register</a>
-						<a href="elements.html">Find Influencers</a>
+						<a href="{{ url_for('index') }}">Home</a>
+						<a href="{{ url_for('generic') }}">Register</a>
+						<a href="{{ url_for('elements') }}">Find Influencers</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
